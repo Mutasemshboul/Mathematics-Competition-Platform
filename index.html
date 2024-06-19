@@ -5,8 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mathematics Competition Platform</title>
 </head>
+<style>
+.addparticipant {
+    background-color:white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    margin: 50px 20px ;
+    box-shadow: 0 4px 4px 2px  #FFC929;
+}
+
+.addparticipant h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color:#2D9BF0;
+}
+
+.addparticipant form {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.addparticipant label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color:#2D9BF0;
+}
+
+.addparticipant input[type="text"],
+.addparticipant input[type="number"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+   
+}
+
+
+.addparticipant button {
+    padding: 10px 15px;
+    background-color: #2D9BF0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 200px;
+    align-self: center;
+    transition: .5s;
+}
+
+.addparticipant button:hover {
+    background-color: #FFC929;
+}
+
+</style>
 <body>
-    <h1>Test</h1>
     
+    <section class="addparticipant">
+       
+            <h1> Add participant </h1>
+            <form >
+                <label for="name" class="colors">Name </label>
+                <input type="text" name="name" >
+                <label for="ID" class="colors">ID </label>
+                <input type="number" name="ID" >
+                <button type="submit" > Add</button>
+            </form>
+           
+        </div>
+
+    </section>
 </body>
 </html>
