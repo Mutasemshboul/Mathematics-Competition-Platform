@@ -1,12 +1,12 @@
 
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
+const admineButton = document.getElementById('signUp');
+const userButton = document.getElementById('signIn');
 const container = document.getElementById('container');
 
-signUpButton.addEventListener('click', () => {
+admineButton.addEventListener('click', () => {
     container.classList.add('right-panel-active');
 });
 
-signInButton.addEventListener('click', () => {
+userButton.addEventListener('click', () => {
     container.classList.remove('right-panel-active');
 });
