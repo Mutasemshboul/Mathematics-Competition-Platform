@@ -3,3 +3,134 @@
     padding: 0;
     box-sizing: border-box;
 }
+.addparticipant {
+    background-color:white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 300px;
+    margin: 50px 20px ;
+    box-shadow:0 1px 7px 0px  #FFC929;
+}
+
+.addparticipant h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color:#2D9BF0;
+}
+
+.addparticipant form {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.addparticipant label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color:#2D9BF0;
+}
+
+.addparticipant input[type="text"],
+.addparticipant input[type="number"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+   
+}
+
+
+.addparticipant button {
+    padding: 10px 15px;
+    background-color: #2D9BF0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 200px;
+    cursor: pointer;
+
+    align-self: center;
+}
+
+.addparticipant button:hover {
+    background-color: #FFC929;
+}
+.addQ
+{
+    background-color:white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 300px;
+    margin: 50px 20px ;
+    box-shadow:0 1px 7px 0px  #FFC929;
+}
+.addQ h1 {
+    text-align: center;
+    margin: 10px 0px;
+    color: #2D9BF0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+form input[name="Question"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+form .multichoice {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+form .multichoice input {
+    width: 48%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+form input[type="radio"] {
+    margin-right: 10px;
+}
+.levelChoice
+{
+display: flex;
+flex-direction: row;
+justify-content: center;
+width: 100%;
+}
+.levelChoice label {
+    margin-right: 20px;
+    color: #2D9BF0; 
+}
+
+
+form button[type="submit"] {
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #2D9BF0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 200px;
+    align-self: center;
+    margin-top: 20px;
+}
+.addQ button:hover {
+    background-color: #FFC929;
+}
