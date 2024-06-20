@@ -13,67 +13,47 @@ main{
 .add-Q-P{
     width: 100%;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
-
-.addparticipant {
-    background-color:white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 300px;
-
+.addparticipant{
+    height: 35%;
+    width: 40%;
     margin: 50px 20px ;
-    box-shadow: 0 4px 4px 2px  #FFC929;
-    display: flex;
-    height: fit-content;
-}
+    box-shadow:0 1px 7px 0px  #FFC929;
+    border-radius: 20px;
 
-.addparticipant h1 {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-    color:#2D9BF0;
 }
-
-.addparticipant form {
+.addparticipant div{
     display: flex;
     flex-direction: column;
-   
-}
-
-.addparticipant label {
-    margin-bottom: 8px;
-    font-weight: bold;
-    color:#2D9BF0;
-}
-
-.addparticipant input[type="text"],
-.addparticipant input[type="number"] {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-   
+    margin: 10px;
 }
 
 
-.addparticipant button {
-    padding: 10px 15px;
-    background-color: #2D9BF0;
-    color: white;
-    border: none;
+.addparticipant h1{
+    text-align: center;
+}
+.addparticipant h1,.addparticipant form label{
+    color: #2D9BF0;
+}
+
+.addparticipant form{
+    margin: 20px;
+}
+
+.addparticipant form label{
+    margin: 7px 0;
+}
+
+.addparticipant form input{
+    margin: 10px 0;
+    height: 30px;
     border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 200px;
-    align-self: center;
-    transition: .5s;
-}
-
-.addparticipant button:hover {
-    background-color: #FFC929;
+    width: 100%;
+    padding: 5px;
+    color: black;
 }
 
 
@@ -157,8 +137,8 @@ ul li a i{
     background-color:white;
     padding: 20px;
     border-radius: 20px;
-    width: 300px;
-    height: fit-content;
+    width: 40%;
+    height: 31%;
     margin: 50px 20px ;
     box-shadow:0 1px 7px 0px  #FFC929;
 }
@@ -179,6 +159,7 @@ form input[name="Question"] {
     padding: 10px;
     margin-bottom: 10px;
     box-sizing: border-box;
+    color: black;
 }
 
 form .multichoice {
@@ -194,6 +175,7 @@ form .multichoice input {
     padding: 10px;
     margin-bottom: 10px;
     box-sizing: border-box;
+    color: black;
 }
 
 form input[type="radio"] {
@@ -213,18 +195,17 @@ width: 100%;
 
 
 form button[type="submit"] {
-    cursor: pointer;
-    padding: 10px 15px;
+    width: 20%;
     background-color: #2D9BF0;
-    color: white;
     border: none;
+    padding: 2%;
     border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 200px;
+    text-align: center;
     align-self: center;
-    margin-top: 20px;
+    margin-top: 4%;
+    cursor: pointer;
+
 }
-.addQ button:hover {
+form button[type="submit"]:hover {
     background-color: #FFC929;
 }
