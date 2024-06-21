@@ -11,6 +11,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -107,6 +108,8 @@ form .multichoice input {
 form input[type="radio"] {
     margin-right: 10px;
 }
+
+
 .levelChoice
 {
 display: flex;
@@ -135,3 +138,5 @@ form button[type="submit"] {
 form button[type="submit"]:hover {
     background-color: #FFC929;
 }
+
+
