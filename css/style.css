@@ -83,7 +83,7 @@ main{
 
 
 .menu{
-    background-color: #FFC929;
+    background: linear-gradient(40deg, #2096ff, #edab1a) !important;
     width: 60px;
     height: 100vh;
     padding: 20px;
