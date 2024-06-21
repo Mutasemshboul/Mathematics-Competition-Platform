@@ -55,17 +55,13 @@
 }
 
 
-
-
-
-
 .addQ
 {
     background-color:white;
     padding: 20px;
     border-radius: 20px;
     width: 40%;
-    height: 31%;
+    height: 40%;
     margin: 50px 20px ;
     box-shadow:0 1px 7px 0px  #FFC929;
 }
@@ -84,7 +80,8 @@ form {
 form input[name="Question"] {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 4%;
+    margin-top: 3%;
     box-sizing: border-box;
     color: black;
 }
@@ -94,13 +91,13 @@ form .multichoice {
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 5%;
 }
 
 form .multichoice input {
     width: 48%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     box-sizing: border-box;
     color: black;
 }
@@ -116,6 +113,7 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 width: 100%;
+margin-top: 5%;
 }
 .levelChoice label {
     margin-right: 20px;
@@ -131,7 +129,7 @@ form button[type="submit"] {
     border-radius: 4px;
     text-align: center;
     align-self: center;
-    margin-top: 4%;
+    margin-top: 2%;
     cursor: pointer;
 
 }

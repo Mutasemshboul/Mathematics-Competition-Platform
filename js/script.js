@@ -1,12 +1,22 @@
+const addParticipantForm = document.getElementById('addParticipantForm');
 
-const admineButton = document.getElementById('signUp');
-const userButton = document.getElementById('signIn');
-const container = document.getElementById('container');
+addParticipantForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const participantName = document.getElementById('name').value;
+    const participantID = document.getElementById('id').value;
+    const level = document.querySelector('.levelChoice input[name="level"]:checked').id === 'level1'? 1 : 2;
 
-admineButton.addEventListener('click', () => {
-    container.classList.add('right-panel-active');
+    const newParticipant = {
+        id: parseInt(participantID),
+        name: participantName,
+        level: parseInt(level)
+    };
+
+    let participants = JSON.parse(localStorage.getItem('participants')) || [];
+    participants.push(newParticipant);
+    localStorage.setItem('participants', JSON.stringify(participants));
+
+    alert(`Participant ${participantName} added successfully!`);
+    addParticipantForm.reset();
 });
 
-userButton.addEventListener('click', () => {
-    container.classList.remove('right-panel-active');
-});
