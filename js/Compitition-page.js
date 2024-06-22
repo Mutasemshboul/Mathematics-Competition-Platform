@@ -6,14 +6,14 @@ function loadParticipantData() {
     if (sessionData && sessionData.type === 'participant') {
         const detailsContainer = document.getElementById('participantDetails');
         detailsContainer.innerHTML = `
-            <span>${sessionData.level}, </span>
-            <span>${sessionData.name}, </span>
-            <span>Computation Time: 30:00, </span>
-            <span>Date: 18/6/2024</span>
+            <span>Level: ${sessionData.level}, </span>
+            <span>Name: ${sessionData.name}, </span>
+            <span id="timer">Computation Time: 00:00, </span>
+            <span>Date: ${new Date().toLocaleDateString()}</span>
         `;
-        
-        // Load questions for the participant's level
+
         loadQuestions(sessionData.level);
+        initializeExamTimer(sessionData.level);
     } else {
         Swal.fire({
             icon: 'error',
@@ -22,6 +22,51 @@ function loadParticipantData() {
         });
     }
 }
+
+function initializeExamTimer(level) {
+    const examStartTimeKey = level + '_startTime';
+    const examStartTime = parseInt(localStorage.getItem(examStartTimeKey));
+    if (!examStartTime) {
+        console.error("Exam start time not found in localStorage for", level);
+        return;
+    }
+
+    const now = Date.now();
+    const elapsed = now - examStartTime;
+    const totalExamTime = 30 * 60 * 1000; // 30 minutes in milliseconds
+    const remainingTime = totalExamTime - elapsed;
+
+    if (remainingTime <= 0) {
+        document.getElementById('timer').innerHTML = "Computation Time: Time's up!";
+        Swal.fire({
+            icon: 'info',
+            title: 'Time’s Up!',
+            text: 'The exam time has expired.'
+        });
+        return;
+    }
+
+    updateTimer(remainingTime);
+}
+
+function updateTimer(remainingTime) {
+    const timerElement = document.getElementById('timer');
+    const interval = setInterval(() => {
+        if (remainingTime <= 0) {
+            clearInterval(interval);
+            timerElement.innerHTML = "Computation Time: Time's up!";
+            endExam();
+            return;
+        }
+
+        const minutes = Math.floor(remainingTime / 60000);
+        const seconds = Math.floor((remainingTime % 60000) / 1000);
+        timerElement.innerHTML = `Computation Time: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        remainingTime -= 1000;
+    }, 1000);
+}
+
+
 
 function loadQuestions(level) {
     const allQuestions = JSON.parse(localStorage.getItem('questions')) || {};

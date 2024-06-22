@@ -81,7 +81,7 @@
     background-color: black;
 }
 
-#date {
+#compTime,#endDate,#startDate {
     display: flex;
     justify-content: start;
     align-items: center;
