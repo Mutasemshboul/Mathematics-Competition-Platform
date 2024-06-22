@@ -22,11 +22,11 @@
             <ul>
                 <li class="profile">
                     <div class="img-box">
-                        <img src="MyPhoto.jpg" alt="profile">
+                        <img src="" alt="profile">
                     </div>
                 </li>
                 <li>
-                    <a class="active" href="#">
+                    <a  href="index.html">
                         <i class="fas fa-home"></i>
                         <p>Dashboard</p>
                     </a>
@@ -38,35 +38,24 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="ParticipantInforamtion.html">
                         <i class="fas fa-table"></i>
-                        <p>products</p>
+                        <p>Participant Inforamtion</p>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="ViewQuestionAndAnswers.html">
                         <i class="fas fa-chart-pie"></i>
-                        <p>charts</p>
+                        <p>Question - Answers</p>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="TrackCompetitionProgress.html">
                         <i class="fas fa-pen"></i>
-                        <p>posts</p>
+                        <p>Competition Progress</p>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-star"></i>
-                        <p>favorite</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-cog"></i>
-                        <p>settings</p>
-                    </a>
-                </li>
+
                 <li class="log-out">
                     <a href="#">
                         <i class="fas fa-sign-out"></i>
@@ -79,65 +68,51 @@
         <section class="add-Q-P">
             <div class="addQ">
                 <div>
-                    <h1> Add Particepint </h1>
-                    <form >
-                        <input type="text" name="Question" placeholder="Enter User Name">
-                        <input type="text" name="Question" placeholder="Enter Id">
-                      
-                        <div  class="levelChoice">
-                            <input type="radio" name="level" id="level1">
-                            <label for="level1">Level 1</label>
-                            <input type="radio" name="level" id="level2">
-                            <label for="level2">Level 2</label>
+                    <h1> Add Participant </h1>
+                    <form id="participantForm">
+                        <input type="text" name="Question" id="userName" placeholder="Enter User Name">
+                        <input type="text" name="Question" id="userId" placeholder="Enter Id">
+                        <div class="levelChoice">
+                            <input type="radio" name="userLevel" id="userLevel1" value="Level 1">
+                            <label for="userLevel1">Level 1</label>
+                            <input type="radio" name="userLevel" id="userLevel2" value="Level 2">
+                            <label for="userLevel2">Level 2</label>
                         </div>
-                        
-                        <button type="submit" > Add</button>
+                        <button type="button" onclick="addParticipant()">Add</button>
                     </form>
                 </div>
             </div>
-
-
             <div class="addQ">
                 <div>
                     <h1> Add Question </h1>
-                    <form >
-                        <input type="text" name="Question" placeholder="Enter a new Question">
+                    <form id="questionForm">
+                        <input type="text" name="Question" id="newQuestion" placeholder="Enter a new Question">
                         <div class="multichoice">
-                            <input type="number" name="ansone" placeholder="Correct answer" >
-                            <input type="number" name="anstwo"  placeholder="answer 2">
-                            <input type="number" name="ansthree"  placeholder="answer 3" >
-                            <input type="number" name="anfour"  placeholder="answer 4">
+                            <input type="text" id="answerOne" placeholder="Correct answer">
+                            <input type="text" id="answerTwo" placeholder="Answer 2">
+                            <input type="text" id="answerThree" placeholder="Answer 3">
+                            <input type="text" id="answerFour" placeholder="Answer 4">
                         </div>
-                        <div  class="levelChoice">
-                            <input type="radio" name="level" id="level1">
-                            <label for="level1">Level 1</label>
-                            <input type="radio" name="level" id="level2">
-                            <label for="level2">Level 2</label>
+                        <div class="levelChoice">
+                            <input type="radio" name="questionLevel" id="questionLevel1" value="Level 1">
+                            <label for="questionLevel1">Level 1</label>
+                            <input type="radio" name="questionLevel" id="questionLevel2" value="Level 2">
+                            <label for="questionLevel2">Level 2</label>
                         </div>
-                        
-                        <button type="submit" > Add</button>
+                        <button type="button" onclick="addQuestion()">Add</button>
                     </form>
                 </div>
             </div>
-            
-
-
-
         </section>
+        
         
     </main>
 
 
 
-    
 
-
-
-
-
-
-    <footer>
-
-    </footer>
 </body>
+<script src="js/addQandP.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </html>
