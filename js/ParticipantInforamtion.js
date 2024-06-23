@@ -8,7 +8,7 @@ function displayParticipants() {
         return `<tr>
                     <td>${id}</td>
                     <td>${name}</td>
-                    <td><button onclick="deleteParticipant('${id}', '${level}')">Delete</button></td>
+                    <td><button class="btn btn-danger" onclick="deleteParticipant('${id}', '${level}')">Delete</button></td>
                 </tr>`;
     };
     

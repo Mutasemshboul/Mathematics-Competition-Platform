@@ -1,12 +1,17 @@
 function displayResults() {
     const allAnswers = JSON.parse(localStorage.getItem('allAnswers')) || {};
-    const tableBody = document.querySelector('.table tbody');
-    tableBody.innerHTML = ''; 
+    const level1Body = document.getElementById('level1Body');
+    const level2Body = document.getElementById('level2Body');
+
+    // Clear existing rows in both tables
+    level1Body.innerHTML = '';
+    level2Body.innerHTML = '';
 
     Object.keys(allAnswers).forEach(userId => {
         const userAnswers = allAnswers[userId];
         const correctAnswers = userAnswers.filter(answer => answer.correct).length;
-        const participantName = allAnswers[userId][0].userName; 
+        const participantName = userAnswers[0].userName; 
+        const participantLevel = userAnswers[0].level; 
 
         const resultPercentage = ((correctAnswers / userAnswers.length) * 100).toFixed(2) + '%';
         const row = `
@@ -15,12 +20,54 @@ function displayResults() {
                 <td>${participantName}</td>
                 <td>${correctAnswers} out of ${userAnswers.length}</td>
                 <td>${resultPercentage}</td>
-                <td><button onclick="deleteResults('${userId}')">Delete</button></td>
+                <td id="action">
+                    <button class="btn btn-danger" onclick="deleteResults('${userId}')">Delete</button>
+                    <button class="btn btn-primary" onclick="showUserDetails('${userId}')">Details</button>
+                </td>
             </tr>
         `;
-        tableBody.innerHTML += row;
+
+        
+        if (participantLevel === "Level 1") {
+            level1Body.innerHTML += row;
+        } else if (participantLevel === "Level 2") {
+            level2Body.innerHTML += row;
+        }
     });
 }
+
+
+function showUserDetails(userId) {
+    const allAnswers = JSON.parse(localStorage.getItem('allAnswers')) || {};
+    const userAnswers = allAnswers[userId];
+
+    if (!userAnswers) {
+        alert("No answers found for this user.");
+        return;
+    }
+
+    const userDetailsBody = document.getElementById('userDetailsBody');
+    userDetailsBody.innerHTML = ''; // Clear previous entries
+
+    userAnswers.forEach((answer) => {
+        const row = `
+            <tr>
+                <td>${answer.question}</td>
+                <td>${answer.selectedOption}</td>
+                <td>${answer.correct ? 'Yes' : 'No'}</td>
+                <td>${answer.timeTaken}</td>
+            </tr>
+        `;
+        userDetailsBody.innerHTML += row; // Append each detail row to the table
+    });
+
+    $('#userDetailsModal').modal('show'); // Display the modal with jQuery
+}
+
+
+
+
+
 
 function deleteResults(userId) {
     const allAnswers = JSON.parse(localStorage.getItem('allAnswers')) || {};

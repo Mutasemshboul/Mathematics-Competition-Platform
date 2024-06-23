@@ -8,6 +8,21 @@
     <link rel="stylesheet" href="css/nav-footer.css">
 
 </head>
+<script>
+    function showAboutMe() {
+        Swal.fire({
+            title: 'About Me',
+            html: '<p>Hi, I\'m [Your Name]. I am passionate about [your passions or interests]. In my free time, I enjoy [your hobbies]. I am always eager to learn new things and take on challenges that help me grow both personally and professionally.</p>',
+            icon: 'info',
+            confirmButtonText: 'Close'
+        });
+    }
+
+    function logout() {
+        localStorage.removeItem('currentSession');
+        window.location.href = 'login.html'; 
+    }
+</script>
 <body>
     <header class="table-title">
         <div class="logo-container">
@@ -17,9 +32,9 @@
         <div >
             <nav class="navbar">
                 <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Log out</a></li>
+                    <li><a href="#" onclick="showAboutMe()">About</a></li>
+                    <li><a href="contact-me.html">Contact</a></li>
+                    <li><a href="#" onclick="logout()">Log out</a></li>
                 </ul>
             </nav>
         </div>
@@ -37,6 +52,7 @@
         <p>Details: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit quos at ducimus modi nemo earum.</p>
         <button class="start-button">Start</button>
     </div>
+    
     
     
         <footer class="footer">

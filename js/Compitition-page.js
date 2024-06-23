@@ -1,6 +1,7 @@
 let currentQuestionIndex = 0;
 let questions = [];
 let allAnswer=[];
+let questionStartTime;
 function loadParticipantData() {
     const sessionData = JSON.parse(localStorage.getItem('currentSession'));
     if (sessionData && sessionData.type === 'participant') {
@@ -33,7 +34,7 @@ function initializeExamTimer(level) {
 
     const now = Date.now();
     const elapsed = now - examStartTime;
-    const totalExamTime = 30 * 60 * 1000; // 30 minutes in milliseconds
+    const totalExamTime = 30 * 60 * 1000; 
     const remainingTime = totalExamTime - elapsed;
 
     if (remainingTime <= 0) {
@@ -78,19 +79,35 @@ function loadQuestions(level) {
 function displayQuestion() {
     const questionContainer = document.getElementById('displayQuestion');
     const nextButton = document.querySelector('.next');
-    
+
     if (questions.length > 0 && questions[currentQuestionIndex]) {
         const question = questions[currentQuestionIndex];
+        const options = shuffleArray(question.answers); // Shuffle a copy of the answers
+
         questionContainer.innerHTML = `<p>Q${currentQuestionIndex + 1}: ${question.question}</p>
             <div class="options">
-                ${question.answers.map((answer, index) => 
+                ${options.map((answer, index) => 
                     `<label><input type="radio" name="choice" value="${index + 1}"> ${answer}</label>`
                 ).join('')}
             </div>`;
+        questionStartTime = new Date().getTime(); // Record the start time of the question
+
+        // Manage the display of the next button
     } else {
         questionContainer.innerHTML = "<p>No questions available.</p>";
     }
 }
+
+
+function shuffleArray(array) {
+    let shuffledArray = [...array]; // Make a copy of the array to shuffle
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
+        [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]]; // swap elements
+    }
+    return shuffledArray;
+}
+
 
 function submitAnswer() {
     const selectedOption = document.querySelector('input[name="choice"]:checked');
@@ -112,10 +129,12 @@ function submitAnswer() {
         });
         return;
     }
-
-    // Load existing answers for this user or initialize a new array if none exist
+    const endTime = new Date().getTime();
+    const timeTaken = (endTime - questionStartTime) / 1000; // Time in seconds
     const allAnswers = JSON.parse(localStorage.getItem('allAnswers')) || {};
     const userAnswers = allAnswers[sessionData.id] || [];
+    console.log(questions[currentQuestionIndex].answers[0]);
+    const isCorrect = selectedOption.nextSibling.textContent.trim() === questions[currentQuestionIndex].answers[0].trim();
     
     userAnswers.push({
         userName:sessionData.name,
@@ -123,13 +142,14 @@ function submitAnswer() {
         question: questions[currentQuestionIndex].question,
         selectedOption: selectedOption.value,
         level:sessionData.level,
-        correct: selectedOption.value === "1"  // Since the correct answer is always the first option
+        correct: isCorrect,
+        timeTaken: timeTaken  
     });
 
-    // Update the answers for this user in the main allAnswers object
+    
     allAnswers[sessionData.id] = userAnswers;
 
-    // Save the updated all answers object back to localStorage
+    
     localStorage.setItem('allAnswers', JSON.stringify(allAnswers));
 
     if (currentQuestionIndex < questions.length - 1) {
@@ -143,7 +163,11 @@ function submitAnswer() {
             text: 'You have completed the quiz.',
             confirmButtonText: 'Finish'
         });
-        location.href = 'Compitition-details.html'
+        sessionData.status = true;
+        console.log(sessionData);
+        localStorage.setItem('currentSession', JSON.stringify(sessionData));
+
+       // location.href = 'Compitition-details.html'
     }
 }
 

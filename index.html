@@ -8,6 +8,12 @@
 
     <title>Mathematics Competition Platform</title>
 </head>
+<script>
+     function logout() {
+        localStorage.removeItem('currentSession');
+        window.location.href = 'login.html'; 
+    }
+</script>
 <body>
     <head>
 
@@ -54,7 +60,7 @@
                 </li>
 
                 <li class="log-out">
-                    <a href="#">
+                    <a href="#" onclick="logout()">
                         <i class="fas fa-sign-out"></i>
                         <p>Log-out</p>
                     </a>

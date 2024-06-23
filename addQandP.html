@@ -10,6 +10,12 @@
 
     </style>
     <title>Q and P</title>
+    <script>
+        function logout() {
+           localStorage.removeItem('currentSession');
+           window.location.href = 'login.html'; 
+       }
+   </script>
 </head>
 <body>
     <head>
@@ -22,7 +28,7 @@
             <ul>
                 <li class="profile">
                     <div class="img-box">
-                        <img src="" alt="profile">
+                        <img src="MyPhoto.jpg" alt="profile">
                     </div>
                 </li>
                 <li>
@@ -57,7 +63,7 @@
                 </li>
 
                 <li class="log-out">
-                    <a href="#">
+                    <a href="#" onclick="logout()">
                         <i class="fas fa-sign-out"></i>
                         <p>Log-out</p>
                     </a>

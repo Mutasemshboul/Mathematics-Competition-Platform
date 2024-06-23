@@ -60,4 +60,3 @@ function addQuestion() {
     });
 }
 
-// Add SweetAlert2 for more user-friendly alerts (already included in the HTML)

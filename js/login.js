@@ -16,6 +16,7 @@ userButton.addEventListener('click', () => {
 
 localStorage.setItem('adminCredentials', JSON.stringify({ name: 'admin', password: '1234' }));
 function loginParticipant() {
+    const sessionData = JSON.parse(localStorage.getItem('currentSession'));
     const inputName = document.getElementById('participantName').value;
     const inputID = document.getElementById('participantID').value;
 
@@ -25,7 +26,12 @@ function loginParticipant() {
     for (let level in participants) {
         const participant = participants[level].find(p => p.id === inputID && p.name === inputName);
         if (participant) {
-            localStorage.setItem('currentSession', JSON.stringify({ type: 'participant', name: inputName, id: inputID, level: level }));
+            if(sessionData){
+                localStorage.setItem('currentSession', JSON.stringify({ type: 'participant', name: inputName, id: inputID, level: level, status: true }));
+            }
+            else{
+                localStorage.setItem('currentSession', JSON.stringify({ type: 'participant', name: inputName, id: inputID, level: level, status: false }));
+            }
             location.href = 'Compitition-details.html'  
             loginSuccessful = true;
             break;

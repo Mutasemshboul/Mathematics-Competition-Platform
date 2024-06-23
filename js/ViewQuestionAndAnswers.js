@@ -21,7 +21,7 @@ function displayQuestionsForLevel(level) {
             row.innerHTML = `
                 <td>${question.question}</td>
                 ${optionHtml}
-                <td><button onclick="deleteQuestion('${indexLevel}', ${index})">Delete</button></td>
+                <td><button class="btn btn-danger" onclick="deleteQuestion('${indexLevel}', ${index})">Delete</button></td>
             `;
             questionsContainer.appendChild(row);
         });
@@ -40,12 +40,12 @@ function deleteQuestion(level, index) {
 
 
 function startExam(level) {
-    const startTime = new Date().getTime(); // Record start time in milliseconds
-    localStorage.setItem(level + '_startTime', startTime); // Save start time in localStorage
+    const startTime = new Date().getTime(); 
+    localStorage.setItem(level + '_startTime', startTime); 
 
-    // Redirect to exam page or show exam interface depending on your setup
+    
     console.log('Exam started for ' + level + ' at ' + new Date(startTime).toLocaleTimeString());
-    // Optionally, show the questions for the selected level
+   
 }
 
 
