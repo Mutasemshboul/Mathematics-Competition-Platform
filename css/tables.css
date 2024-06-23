@@ -55,20 +55,9 @@ body {
     float: left;
     margin-top: 2px;
 }
-.btn-success{
-background-color: #03a9f4;
-}
 
-.btn-danger{
-background-color: orange;
-}
-.btn-danger:hover{
-background-color: #03a9f4;
-}
 
-.btn-success:hover{
-background-color:orange;
-}
+
 
 table.table tr th,
 table.table tr td {
@@ -282,3 +271,12 @@ table.table .avatar {
 .modal form label {
     font-weight: normal;
 }
+
+#action{
+    display: flex;
+}
+
+#action button{
+    margin: 0 10px;
+}
+

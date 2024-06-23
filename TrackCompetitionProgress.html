@@ -41,6 +41,11 @@
                     }
                 });
             });
+
+            function logout() {
+        localStorage.removeItem('currentSession');
+        window.location.href = 'login.html'; 
+    }
         </script>
     </head>
 
@@ -56,7 +61,7 @@
                             </div>
                         </li>
                         <li>
-                            <a class="active" href="#">
+                            <a  href="index.html">
                                 <i class="fas fa-home"></i>
                                 <p>Dashboard</p>
                             </a>
@@ -68,37 +73,26 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ParticipantInforamtion.html">
                                 <i class="fas fa-table"></i>
-                                <p>products</p>
+                                <p>Participant Inforamtion</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="ViewQuestionAndAnswers.html">
                                 <i class="fas fa-chart-pie"></i>
-                                <p>charts</p>
+                                <p>Question - Answers</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="TrackCompetitionProgress.html">
                                 <i class="fas fa-pen"></i>
-                                <p>posts</p>
+                                <p>Competition Progress</p>
                             </a>
                         </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-star"></i>
-                                <p>favorite</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-cog"></i>
-                                <p>settings</p>
-                            </a>
-                        </li>
+        
                         <li class="log-out">
-                            <a href="#">
+                            <a href="#" onclick="logout()">
                                 <i class="fas fa-sign-out"></i>
                                 <p>Log-out</p>
                             </a>
@@ -125,25 +119,18 @@
                 <table class="table table-striped table-hover">
                     <thead>
                         <tr>
-                            <th>
-                               ID
-                            </th>
-                            <th>Participant Name </th>
-                            <th>corrected Answers </th>
-
-                            <th>Result </th>
-
+                            <th>ID</th>
+                            <th>Participant Name</th>
+                            <th>Correct Answers</th>
+                            <th>Result</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            
-                        </tr>
-                      
-                      
+                    <tbody id="level1Body">
+                        <!-- Level 1 rows will be added here dynamically -->
                     </tbody>
                 </table>
+                
                 <div class="clearfix">
                     <div class="hint-text">Showing <b>5</b> out of <b>100</b> entries</div>
                     <ul class="pagination">
@@ -177,23 +164,15 @@
                 <table class="table table-striped table-hover">
                     <thead>
                         <tr>
-                            <th>
-                               ID
-                            </th>
-                            <th>Participant Name </th>
-                            <th>corrected Answers </th>
-
-                            <th>Result </th>
-
+                            <th>ID</th>
+                            <th>Participant Name</th>
+                            <th>Correct Answers</th>
+                            <th>Result</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            
-                        </tr>
-                      
-                      
+                    <tbody id="level2Body">
+                        <!-- Level 2 rows will be added here dynamically -->
                     </tbody>
                 </table>
                 <div class="clearfix">
@@ -210,6 +189,38 @@
                 </div>
             </div>
         </div>
+
+
+        <div id="userDetailsModal" class="modal fade">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">User Answer Details</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Question</th>
+                                    <th>Selected Option</th>
+                                    <th>Correct</th>
+                                    <th>Time Taken (seconds)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="userDetailsBody">
+                                <!-- Details rows go here -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
 
         <!-- Edit Modal HTML -->
         <div id="addQuestionModal" class="modal fade">
@@ -311,4 +322,5 @@
         </main>
 
     </body>
+    <script src="js/TrackCompetitionProgress.js"></script>
 </html>

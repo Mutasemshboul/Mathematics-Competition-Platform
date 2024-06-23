@@ -9,38 +9,42 @@
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form action="#">
-                <h1>Participant login</h1>
+            <form action="#" id="participantForm">
+                <h1>Participant Login</h1>
                 <span>Enter your name and ID</span>
-                <input type="text" placeholder="Name" />
-                <input type="number" placeholder="ID" />
-                <button>Login</button>
+                <input type="text" placeholder="Name" id="participantName" />
+                <input type="number" placeholder="ID" id="participantID" />
+                <button type="button" onclick="loginParticipant()">Login</button>
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="#">
-                <h1>Admine Login</h1>
-                <span>Enter you name  and Password</span>
-                <input type="text" placeholder="Name" />
-                <input type="password" placeholder="Password" />
-                <button>Login</button>
+            <form action="#" id="adminForm">
+                <h1>Admin Login</h1>
+                <span>Enter your name and password</span>
+                <input type="text" placeholder="Name" id="adminName" />
+                <input type="password" placeholder="Password" id="adminPassword" />
+                <button type="button" onclick="loginAdmin()">Login</button>
             </form>
         </div>
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
-                    <h1>Hello, Are you Participant?</h1>
-                    <p>login as  Participant </p>
+                    <h1>Hello, Are you a Participant?</h1>
+                    <p>Login as a Participant</p>
                     <button class="ghost" id="signIn">Login</button>
                 </div>
                 <div class="overlay-panel overlay-right">
                     <h1>Hello, Are you administration?</h1>
-                    <p>login as administration</p>
-                    <button class="ghost" id="signUp">login</button>
+                    <p>Login as administration</p>
+                    <button class="ghost" id="signUp">Login</button>
                 </div>
             </div>
         </div>
     </div>
-    <script src="js/script.js"></script>
+    
+   
+
 </body>
+<script src="js/login.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>

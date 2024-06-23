@@ -7,6 +7,23 @@
     <link rel="stylesheet" href="css/Compitition-page.css">
     <link rel="stylesheet" href="css/nav-footer.css">
 </head>
+<script>
+    function showAboutMe() {
+        Swal.fire({
+            title: 'About Me',
+            html: '<p>Hi, I\'m [Your Name]. I am passionate about [your passions or interests]. In my free time, I enjoy [your hobbies]. I am always eager to learn new things and take on challenges that help me grow both personally and professionally.</p>',
+            icon: 'info',
+            confirmButtonText: 'Close'
+        });
+    }
+
+    function logout() {
+        localStorage.removeItem('currentSession');
+        window.location.href = 'login.html'; 
+    }
+
+</script>
+
 <body>
     <header class="table-title">
         <div class="logo-container">
@@ -16,9 +33,9 @@
         <div >
             <nav class="navbar">
                 <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Log out</a></li>
+                    <li><a href="#" onclick="showAboutMe()">About</a></li>
+                    <li><a href="contact-me.html">Contact</a></li>
+                    <li><a href="#" onclick="logout()">Log out</a></li>
                 </ul>
             </nav>
         </div>
@@ -35,28 +52,20 @@
                 <img src="icone.png" alt="Project Icon">
                 <span>Project Name</span>
             </div>
-            <div class="details">
-                <span>Level 1, </span>
-                <span>Participant Name, </span>
-                <span>Computation Time: 30:00, </span>
-                <span>Date: 18/6/2024</span>
+            <div class="details" id="participantDetails">
+                <!-- Participant details will be populated here -->
             </div>
         </section>
         <section class="question-section">
-            <div class="question">
-                <p>Q1: 3x+2y=3  find the value of X and </p>
-                <div class="options">
-                    <label><input type="radio" name="choice" value="1"> Choose 1</label>
-                    <label><input type="radio" name="choice" value="2"> Choose 1</label>
-                    <label><input type="radio" name="choice" value="3"> Choose 1</label>
-                    <label><input type="radio" name="choice" value="4"> Choose 1</label>
-                </div>
+            <div class="question" id="displayQuestion">
+                <!-- Question and options will be populated here -->
             </div>
             <div class="navigation">
-                <button class="prev">Next</button>
-                <button class="next">Finsh</button>
+                <button onclick="submitAnswer()">Submit Answer</button>
+                <button class="next" onclick="nextQuestion()" style="display:none;">Next</button>
             </div>
         </section>
+        
     </div>
 
     <footer class="footer">
@@ -84,4 +93,8 @@
         </div>
     </footer>
 </body>
+
+<script src="js/Compitition-page.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </html>
