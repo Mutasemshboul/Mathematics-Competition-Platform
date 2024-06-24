@@ -87,6 +87,7 @@ form input[name="Question"] {
     margin-bottom: 10px;
     box-sizing: border-box;
     color: black;
+    border-radius: 10px;
 }
 
 form .multichoice {
@@ -95,6 +96,7 @@ form .multichoice {
     justify-content: space-between;
     width: 100%;
     margin-bottom: 20px;
+    
 }
 
 form .multichoice input {
@@ -103,6 +105,7 @@ form .multichoice input {
     margin-bottom: 10px;
     box-sizing: border-box;
     color: black;
+    border-radius: 10px;
 }
 
 form input[type="radio"] {

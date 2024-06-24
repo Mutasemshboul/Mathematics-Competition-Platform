@@ -82,7 +82,7 @@ function displayQuestion() {
 
     if (questions.length > 0 && questions[currentQuestionIndex]) {
         const question = questions[currentQuestionIndex];
-        const options = shuffleArray(question.answers); // Shuffle a copy of the answers
+        const options = shuffleArray(question.answers); 
 
         questionContainer.innerHTML = `<p>Q${currentQuestionIndex + 1}: ${question.question}</p>
             <div class="options">
@@ -90,9 +90,9 @@ function displayQuestion() {
                     `<label><input type="radio" name="choice" value="${index + 1}"> ${answer}</label>`
                 ).join('')}
             </div>`;
-        questionStartTime = new Date().getTime(); // Record the start time of the question
+        questionStartTime = new Date().getTime(); 
 
-        // Manage the display of the next button
+        
     } else {
         questionContainer.innerHTML = "<p>No questions available.</p>";
     }
@@ -100,10 +100,10 @@ function displayQuestion() {
 
 
 function shuffleArray(array) {
-    let shuffledArray = [...array]; // Make a copy of the array to shuffle
+    let shuffledArray = [...array]; 
     for (let i = shuffledArray.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
-        [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]]; // swap elements
+        const j = Math.floor(Math.random() * (i + 1)); 
+        [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]]; 
     }
     return shuffledArray;
 }
@@ -130,7 +130,7 @@ function submitAnswer() {
         return;
     }
     const endTime = new Date().getTime();
-    const timeTaken = (endTime - questionStartTime) / 1000; // Time in seconds
+    const timeTaken = (endTime - questionStartTime) / 1000; 
     const allAnswers = JSON.parse(localStorage.getItem('allAnswers')) || {};
     const userAnswers = allAnswers[sessionData.id] || [];
     console.log(questions[currentQuestionIndex].answers[0]);
@@ -167,7 +167,7 @@ function submitAnswer() {
         console.log(sessionData);
         localStorage.setItem('currentSession', JSON.stringify(sessionData));
 
-       // location.href = 'Compitition-details.html'
+       
     }
 }
 

@@ -54,7 +54,7 @@ function loginAdmin() {
 
     const storedData = JSON.parse(localStorage.getItem('adminCredentials'));
     if (storedData && storedData.name === inputName && storedData.password === inputPassword) {
-         location.href = 'index.html'
+         location.href = 'addQandP.html'
         localStorage.setItem('currentSession', JSON.stringify({ type: 'admin', name: inputName }));
     } else {
         Swal.fire({

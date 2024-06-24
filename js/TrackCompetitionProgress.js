@@ -3,7 +3,6 @@ function displayResults() {
     const level1Body = document.getElementById('level1Body');
     const level2Body = document.getElementById('level2Body');
 
-    // Clear existing rows in both tables
     level1Body.innerHTML = '';
     level2Body.innerHTML = '';
 

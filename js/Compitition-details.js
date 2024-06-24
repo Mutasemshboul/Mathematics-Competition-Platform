@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const sessionData = JSON.parse(localStorage.getItem('currentSession'));
+    const allAnswers = JSON.parse(localStorage.getItem('allAnswers'));
+    //console.log(allAnswers);
     if (!sessionData || !sessionData.level) {
         Swal.fire({
             icon: 'error',
@@ -27,6 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const currentTime = Date.now();
     const startTime = parseInt(examStartTime);
+
+
     if (sessionData.status) {
         startButton.style.cursor = "not-allowed";
         startButton.disabled = true;

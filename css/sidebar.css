@@ -15,7 +15,6 @@ main{
     height: 50%;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid white;
     flex-shrink: 0;
 }
 
@@ -35,13 +34,15 @@ main{
 
 
 .menu{
-    background: linear-gradient(40deg, #2096ff, #edab1a) !important;
+    background: #2096ff;
     width: 60px;
     height: 100vh;
     padding: 20px;
     overflow: hidden;
     transition: 0.5s;
     width: 260px;
+    font-weight: bold;
+    
 }
 /* .menu:hover{
     width: 260px;
@@ -76,7 +77,7 @@ ul li a:hover,.active ,.data-info .box:hover,td:hover{
     width: 100%;
 }
 .log-out a{
-    background-color: red;
+    background-color: rgb(255, 140, 0);
 }
 
 ul li a i{

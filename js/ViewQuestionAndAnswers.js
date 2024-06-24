@@ -53,8 +53,4 @@ function startExam(level) {
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
 
-    displayQuestionsForLevel('levelOne');
-    displayQuestionsForLevel('levelTwo');
-});

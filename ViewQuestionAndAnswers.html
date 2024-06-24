@@ -19,6 +19,11 @@
 
 
         <script type="text/javascript">
+
+
+            document.addEventListener('DOMContentLoaded', function() {
+                displayQuestionsForLevel('levelOne');
+            });
             $(document).ready(function () {
                 // Activate tooltip
                 $('[data-toggle="tooltip"]').tooltip();
@@ -57,15 +62,10 @@
                     <ul>
                         <li class="profile">
                             <div class="img-box">
-                                <img src="MyPhoto.jpg" alt="profile">
+                                <img src="logo.png" alt="profile">
                             </div>
                         </li>
-                        <li>
-                            <a  href="index.html">
-                                <i class="fas fa-home"></i>
-                                <p>Dashboard</p>
-                            </a>
-                        </li>
+    
                         <li>
                             <a href="addQandP.html">
                                 <i class="fas fa-user-group"></i>
@@ -81,7 +81,13 @@
                         <li>
                             <a href="ViewQuestionAndAnswers.html">
                                 <i class="fas fa-chart-pie"></i>
-                                <p>Question - Answers</p>
+                                <p>Question - Answers Level 1</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="table-level2-q.html">
+                                <i class="fas fa-chart-pie"></i>
+                                <p>Question - Answers Level 2</p>
                             </a>
                         </li>
                         <li>
@@ -137,40 +143,7 @@
         </div>
 
 
-        <!-- Level Two -->
-        <div class="container">
-            <div class="table-wrapper">
-                <div class="table-title">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <h2>Level <b>Two</b></h2>
-                        </div>
-                        <div class="col-sm-6 text-right">
-                            <button onclick="startExam('Level 2')" class="btn btn-success">Start Exam</button>
-                        </div>
-                       
-                    </div>
-                </div>
-                <table class="table table-striped table-hover" id="levelTwoQuestionsTable">
-                    <thead>
-                        <tr>
-                            
-                            <th>Question </th>
-                            <th>Correct Answer</th>
-                            <th>Option 1</th>
-                            <th>Option 2</th>
-                            <th>Option 3</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody id="levelTwoQuestionBody">
 
-                     
-                    </tbody>
-                </table>
-
-            </div>
-        </div>
         <!-- Edit Modal HTML -->
         <div id="addQuestionModal" class="modal fade">
             <div class="modal-dialog">
