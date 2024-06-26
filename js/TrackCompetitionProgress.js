@@ -46,8 +46,7 @@ function showUserDetails(userId) {
     }
 
     const userDetailsBody = document.getElementById('userDetailsBody');
-    userDetailsBody.innerHTML = ''; // Clear previous entries
-
+    userDetailsBody.innerHTML = ''; 
     userAnswers.forEach((answer) => {
         const row = `
             <tr>
@@ -57,10 +56,10 @@ function showUserDetails(userId) {
                 <td>${answer.timeTaken}</td>
             </tr>
         `;
-        userDetailsBody.innerHTML += row; // Append each detail row to the table
+        userDetailsBody.innerHTML += row; 
     });
 
-    $('#userDetailsModal').modal('show'); // Display the modal with jQuery
+    $('#userDetailsModal').modal('show'); 
 }
 
 

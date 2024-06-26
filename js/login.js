@@ -14,7 +14,10 @@ userButton.addEventListener('click', () => {
 
 
 
+
 localStorage.setItem('adminCredentials', JSON.stringify({ name: 'admin', password: '1234' }));
+
+
 function loginParticipant() {
     const sessionData = JSON.parse(localStorage.getItem('currentSession'));
     const inputName = document.getElementById('participantName').value;
@@ -26,7 +29,7 @@ function loginParticipant() {
     for (let level in participants) {
         const participant = participants[level].find(p => p.id === inputID && p.name === inputName);
         if (participant) {
-            if(sessionData){
+            if(sessionData.status){
                 localStorage.setItem('currentSession', JSON.stringify({ type: 'participant', name: inputName, id: inputID, level: level, status: true }));
             }
             else{
