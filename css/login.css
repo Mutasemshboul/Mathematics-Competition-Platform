@@ -8,7 +8,7 @@
 }
 
 body {
-    background: #f6f5f7;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,7 +119,7 @@ body {
 }
 
 .overlay {
-    background: linear-gradient(to right, #FFC929, #2D9BF0); /* Standard syntax */
+    background: linear-gradient(to right, #123151, #2D9BF0); /* Standard syntax */
     background-repeat: no-repeat;
     color: #FFFFFF;
     position: relative;
@@ -155,8 +155,8 @@ body {
 
 button {
     border-radius: 20px;
-    border: 1px solid #2D9BF0;
-    background: #2D9BF0;
+    border: 1px solid #123151;
+    background: #123151;
     color: #FFFFFF;
     font-size: 12px;
     font-weight: bold;
@@ -175,10 +175,7 @@ button:active {
 
 button:hover
 {
-    background: #FFC929; /* Fallback color */
-    background: -webkit-linear-gradient(to right, #FFC929, #2D9BF0); /* For Safari */
-    background: linear-gradient(to right, #FFC929, #2D9BF0); /* Standard syntax */
-    background-repeat: no-repeat; 
+    background:#ccc
 }
 button.ghost {
     background-color: transparent;

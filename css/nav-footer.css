@@ -17,14 +17,14 @@ body {
 .table-title {
     /* padding: 15px; */
     padding: 10px 20px;
-    background: linear-gradient(40deg, #2096ff, #edab1a) !important;
+background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='250' preserveAspectRatio='none' viewBox='0 0 1440 250'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1000%26quot%3b)' fill='none'%3e%3crect width='1440' height='250' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M34 250L284 0L437 0L187 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)'%3e%3c/path%3e%3cpath d='M262.6 250L512.6 0L728.6 0L478.6 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)'%3e%3c/path%3e%3cpath d='M510.20000000000005 250L760.2 0L980.7 0L730.7 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)'%3e%3c/path%3e%3cpath d='M724.8000000000001 250L974.8000000000001 0L1325.8000000000002 0L1075.8000000000002 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)'%3e%3c/path%3e%3cpath d='M1411 250L1161 0L810 0L1060 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)'%3e%3c/path%3e%3cpath d='M1165.4 250L915.4000000000001 0L628.9000000000001 0L878.9000000000001 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)'%3e%3c/path%3e%3cpath d='M945.8 250L695.8 0L371.79999999999995 0L621.8 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)'%3e%3c/path%3e%3cpath d='M696.1999999999999 250L446.19999999999993 0L252.69999999999993 0L502.69999999999993 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)'%3e%3c/path%3e%3cpath d='M1246.4298281094073 250L1440 56.42982810940717L1440 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)'%3e%3c/path%3e%3cpath d='M0 250L193.57017189059283 250L 0 56.42982810940717z' fill='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1000'%3e%3crect width='1440' height='250' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1001'%3e%3cstop stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1002'%3e%3cstop stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
     /* color: #fff;
     padding: 16px 30px;
     margin: -20px -25px 10px;
     border-radius: 1px 1px 0 0;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.247); */
     width: 100%;
-    color: black;
+    color: whitesmoke;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -46,14 +46,14 @@ body {
 }
 
 .navbar a {
-    color: black;
+    color: whitesmoke;
     text-decoration: none;
     padding: 10px 20px;
     display: block;
 }
 
 .navbar a:hover {
-    background-color: white;
+   color: rgb(70, 67, 67);
     transition: 0.5s ;
     border-radius: 10px;
 }
@@ -64,8 +64,8 @@ body {
 
 /* -------------------------------------------------------------------------- */
 .footer {
-    background: linear-gradient(40deg, #2096ff, #edab1a) !important;
-    color: black;
+background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='250' preserveAspectRatio='none' viewBox='0 0 1440 250'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1000%26quot%3b)' fill='none'%3e%3crect width='1440' height='250' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M34 250L284 0L437 0L187 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)'%3e%3c/path%3e%3cpath d='M262.6 250L512.6 0L728.6 0L478.6 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)'%3e%3c/path%3e%3cpath d='M510.20000000000005 250L760.2 0L980.7 0L730.7 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)'%3e%3c/path%3e%3cpath d='M724.8000000000001 250L974.8000000000001 0L1325.8000000000002 0L1075.8000000000002 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)'%3e%3c/path%3e%3cpath d='M1411 250L1161 0L810 0L1060 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)'%3e%3c/path%3e%3cpath d='M1165.4 250L915.4000000000001 0L628.9000000000001 0L878.9000000000001 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)'%3e%3c/path%3e%3cpath d='M945.8 250L695.8 0L371.79999999999995 0L621.8 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)'%3e%3c/path%3e%3cpath d='M696.1999999999999 250L446.19999999999993 0L252.69999999999993 0L502.69999999999993 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)'%3e%3c/path%3e%3cpath d='M1246.4298281094073 250L1440 56.42982810940717L1440 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1001%26quot%3b)'%3e%3c/path%3e%3cpath d='M0 250L193.57017189059283 250L 0 56.42982810940717z' fill='url(%26quot%3b%23SvgjsLinearGradient1002%26quot%3b)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1000'%3e%3crect width='1440' height='250' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1001'%3e%3cstop stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1002'%3e%3cstop stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+    color: whitesmoke;
     width: 100%;
     height: 21%;
 
@@ -88,7 +88,7 @@ body {
 
 .footer-section h2 {
     font-size: 18px;
-    color: black;
+    color: whitesmoke;
     margin-bottom: 15px;
 }
 
@@ -113,7 +113,7 @@ body {
 }
 
 .footer-section ul li a:hover {
-    color: #f39c12;
+    color: #6e6b65;
 }
 
 .footer-bottom {

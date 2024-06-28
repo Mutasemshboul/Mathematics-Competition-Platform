@@ -2,13 +2,13 @@
     padding: 0;
     margin: 0;
     color: white;
+    
     font-family: sans-serif;
 }
 
-
-
 .add-Q-P{
     width: 100%;
+    background: #f5f5f5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +19,7 @@
     height: 35%;
     width: 40%;
     margin: 50px 20px ;
-    box-shadow:0 1px 7px 0px  #FFC929;
+    box-shadow:0 1px 7px 0px  #928e81;
     border-radius: 20px;
 
 }
@@ -34,7 +34,7 @@
     text-align: center;
 }
 .addparticipant h1,.addparticipant form label{
-    color: #2D9BF0;
+    color: #123151;
 }
 
 .addparticipant form{
@@ -54,25 +54,20 @@
     color: black;
 }
 
-
-
-
-
-
 .addQ
 {
-    background-color:white;
+    background-color:rgb(255, 255, 255);
     padding: 20px;
     border-radius: 20px;
-    width: 40%;
+    width: 30%;
     height: 40%;
     margin: 50px 20px ;
-    box-shadow:0 1px 7px 0px  #FFC929;
+    box-shadow:0 1px 7px 0px  #c5c2be;
 }
 .addQ h1 {
     text-align: center;
     margin: 10px 0px;
-    color: #2D9BF0;
+    color: #123151;
 }
 
 form {
@@ -88,6 +83,7 @@ form input[name="Question"] {
     box-sizing: border-box;
     color: black;
     border-radius: 10px;
+    border-color: #123151;
 }
 
 form .multichoice {
@@ -106,6 +102,8 @@ form .multichoice input {
     box-sizing: border-box;
     color: black;
     border-radius: 10px;
+    border-color: #1a4774;
+
 }
 
 form input[type="radio"] {
@@ -122,13 +120,13 @@ width: 100%;
 }
 .levelChoice label {
     margin-right: 20px;
-    color: #2D9BF0; 
+    color:#123151; 
 }
 
 
 form button[type="button"] {
     width: 20%;
-    background-color: #2D9BF0;
+    background-color: #123151;
     border: none;
     padding: 2%;
     border-radius: 4px;
@@ -139,7 +137,7 @@ form button[type="button"] {
 
 }
 form button[type="submit"]:hover {
-    background-color: #FFC929;
+    background-color: #928e81;
 }
 
 
