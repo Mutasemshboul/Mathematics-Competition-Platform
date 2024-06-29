@@ -24,22 +24,22 @@
 </script>
 
 <body>
-    <header class="table-title">
-        <div class="logo-container">
-            <img src="logo.png" alt="Project Logo" class="logo">
-            <h1 class="project-name">Project Name</h1>
+    <nav class="responsive-navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="logo.png" alt="Project Logo" class="logo">
+                <a href="#" class="project-name">Project Name</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showAboutMe()">About</a></li>
+                <li><a href="contact-me.html">Contact</a></li>
+                <li><a href="#" onclick="logout()">Log out</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
         </div>
-        <div >
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#" onclick="showAboutMe()">About</a></li>
-                    <li><a href="contact-me.html">Contact</a></li>
-                    <li><a href="#" onclick="logout()">Log out</a></li>
-                </ul>
-            </nav>
-        </div>
-        
-    </header>
+    </nav>
 
 
     <div class="container">
