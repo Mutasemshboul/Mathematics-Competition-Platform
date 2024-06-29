@@ -7,10 +7,10 @@ function loadParticipantData() {
     if (sessionData && sessionData.type === 'participant') {
         const detailsContainer = document.getElementById('participantDetails');
         detailsContainer.innerHTML = `
-            <span>Level: ${sessionData.level}, </span>
-            <span>Name: ${sessionData.name}, </span>
-            <span id="timer">Computation Time: 00:00, </span>
-            <span>Date: ${new Date().toLocaleDateString()}</span>
+           <div> <span>Level: ${sessionData.level} </span>
+            <span>Name: ${sessionData.name} </span></div>
+            <div><span id="timer">Computation Time: 00:00 </span>
+            <span>Date: ${new Date().toLocaleDateString()}</span></div>
         `;
 
         loadQuestions(sessionData.level);

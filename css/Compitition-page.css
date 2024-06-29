@@ -74,7 +74,7 @@ header h3
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
-.project-info {
+.project-info div{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -112,6 +112,9 @@ header h3
 
     border-radius: 10px;
 }
+
+
+
 
 .question-section .question {
     margin-bottom: 20px;
