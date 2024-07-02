@@ -18,6 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const startButton = document.querySelector('.start-button');
 
     if (!examStartTime) {
+        startButton.disabled = true;
+        startButton.style.cursor = "not-allowed";
+
         Swal.fire({
             icon: 'error',
             title: 'Oops...',

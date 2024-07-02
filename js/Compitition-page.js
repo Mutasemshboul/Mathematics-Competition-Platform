@@ -2,6 +2,7 @@ let currentQuestionIndex = 0;
 let questions = [];
 let allAnswer=[];
 let questionStartTime;
+let examLevel ;
 function loadParticipantData() {
     const sessionData = JSON.parse(localStorage.getItem('currentSession'));
     if (sessionData && sessionData.type === 'participant') {
@@ -26,6 +27,7 @@ function loadParticipantData() {
 
 function initializeExamTimer(level) {
     const examStartTimeKey = level + '_startTime';
+    examLevel = examStartTimeKey;
     const examStartTime = parseInt(localStorage.getItem(examStartTimeKey));
     if (!examStartTime) {
         console.error("Exam start time not found in localStorage for", level);
@@ -34,7 +36,7 @@ function initializeExamTimer(level) {
 
     const now = Date.now();
     const elapsed = now - examStartTime;
-    const totalExamTime = 30 * 60 * 1000; 
+    const totalExamTime = 0.5 * 60 * 1000; 
     const remainingTime = totalExamTime - elapsed;
 
     if (remainingTime <= 0) {
@@ -57,6 +59,7 @@ function updateTimer(remainingTime) {
             clearInterval(interval);
             timerElement.innerHTML = "Computation Time: Time's up!";
             endExam();
+            location.href='Compitition-details.html';
             return;
         }
 
@@ -67,7 +70,9 @@ function updateTimer(remainingTime) {
     }, 1000);
 }
 
-
+function endExam(){
+    localStorage.removeItem(examLevel);
+}
 
 function loadQuestions(level) {
     const allQuestions = JSON.parse(localStorage.getItem('questions')) || {};
@@ -157,6 +162,7 @@ function submitAnswer() {
         displayQuestion();
     } else {
         document.getElementById('displayQuestion').innerHTML = "<p>You have completed all questions.</p>";
+        document.getElementById('submit-answer').style.visibility = 'hidden';
         Swal.fire({
             icon: 'success',
             title: 'Completed!',
