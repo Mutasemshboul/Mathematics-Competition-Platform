@@ -1,0 +1,164 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.container{
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+.logo{
+    width: 40px;
+}
+
+header ul li{
+    display: inline-block;
+}
+
+header ul li a{
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    color: #fff;
+    background: #282e40;
+    border-radius: 40px;
+    padding: 20px;
+    margin-bottom: 100px;
+    
+}
+
+.content .image{
+    width: 20%;
+    
+}
+.image img{
+    width: 350px;
+    height:350px;
+}
+
+.content .text{
+    width: 40%;
+
+}
+
+.content .text h2{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.content .text p{
+    font-size: 18px;
+    margin: 20px 0;
+
+}
+
+.content .text a{
+    text-decoration: none;
+    background: gray;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    color: #000000;
+    border-radius: 40px;
+    padding: 20px;
+    margin-bottom: 100px;
+
+}
+
+.about .text p{
+    font-size: 18px;
+    margin: 20px 0;
+
+}
+
+.contact-us{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 100px;
+
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+
+}
+
+input ,textarea{
+    border: none;
+    margin: 10px 0;
+    padding: 25px 25px;
+    color: #fff;
+    border-radius: 0;
+    background: #282e40;
+    height: 20px;
+    color: #fff;
+    max-width: 568px;
+    width: 300px;
+}
+
+.btn{
+    width: 50%;
+    align-self: center;
+    background: #92e3a9;
+    color: #111;
+    color: #fff;
+    padding: 0;
+    float: left;
+    font-size: 20px;
+    font-weight: 300;
+    border: none;
+
+    margin-right: 0;
+    width: 220px;
+    height: 65px;
+    text-align: center;
+    line-height: 65px;
+    
+}
+
+textarea{
+    margin-bottom: 37px;
+    padding: 25px 25px;
+    color: #fff;
+    max-width: 568px;
+    border: none;
+    border-radius: 0;
+    min-height: 145px;
+    background: #282e40;
+    font-size: 1rem;
+    line-height: 1.5em;
+}
+span{
+    color: #12c6f4 !important;
+}
